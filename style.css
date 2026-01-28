@@ -1,10 +1,28 @@
-/* style.css - Fabulous Creative Edition */
+/* style.css - SCROLL FIXED VERSION */
+
+/* ========== SCROLL FIX ========== */
+html {
+    height: auto;
+    min-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+body {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+/* ================================ */
 
 /* RESET & BASE */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-height: none;
 }
 
 body {
@@ -21,7 +39,6 @@ body {
     animation: gradientBG 15s ease infinite;
     min-height: 100vh;
     padding: 20px;
-    overflow-x: hidden;
 }
 
 @keyframes gradientBG {
@@ -30,7 +47,7 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* MAIN CONTAINER */
+/* MAIN CONTAINER - FIXED FOR SCROLL */
 body {
     max-width: 1100px;
     margin: 30px auto;
@@ -43,7 +60,9 @@ body {
         inset 0 1px 0 rgba(255, 255, 255, 0.6);
     border: 2px solid rgba(255, 255, 255, 0.3);
     position: relative;
-    overflow: hidden;
+    min-height: calc(100vh - 60px); /* Dynamic height */
+    height: auto;
+    overflow: visible; /* Changed from hidden */
 }
 
 /* DECORATIVE ELEMENTS */
@@ -67,7 +86,7 @@ body::before {
     100% { transform: rotate(360deg); }
 }
 
-/* MAIN HEADER - SUPER CREATIVE */
+/* MAIN HEADER */
 h1 {
     font-family: 'Pacifico', cursive;
     color: #9B59B6;
@@ -347,6 +366,7 @@ h2:last-of-type + p {
     position: relative;
     overflow: hidden;
     transition: all 0.4s ease;
+    margin-bottom: 100px; /* Added space for scrolling */
 }
 
 h2:last-of-type + p:hover {
@@ -467,6 +487,12 @@ body::after {
         radial-gradient(circle at 70% 30%, rgba(255, 159, 67, 0.15) 2px, transparent 3px);
     background-size: 200px 200px;
     animation: floatUp 20s linear infinite;
+}
+
+/* ADD SPACE FOR SCROLLING AT BOTTOM */
+.spacer {
+    height: 100px;
+    display: block;
 }
 
 /* ADD GOOGLE FONTS IMPORT */
