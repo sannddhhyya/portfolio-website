@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Scroll</title>
+    <style>
+        /* SIMPLE SCROLL TEST - NO FANCY STUFF */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            height: 100%;
+            overflow-y: auto !important;
+            overflow-x: hidden;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: lightblue;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: darkblue;
+            margin-bottom: 20px;
+        }
+        
+        .content-block {
+            height: 500px;
+            background: #f0f0f0;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SCROLL TEST - Can you scroll this?</h1>
+        
+        <div class="content-block">
+            <h2>Block 1</h2>
+            <p>If you can see this, scroll down...</p>
+        </div>
+        
+        <div class="content-block">
+            <h2>Block 2</h2>
+            <p>Keep scrolling...</p>
+        </div>
+        
+        <div class="content-block">
+            <h2>Block 3</h2>
+            <p>Almost there...</p>
+        </div>
+        
+        <div class="content-block">
+            <h2>Block 4</h2>
+            <p>Can you scroll to see this?</p>
+            <p>If YES: Your browser works fine</p>
+            <p>If NO: Browser/OS issue</p>
+        </div>
+        
+        <div class="content-block">
+            <h2>Block 5 - BOTTOM</h2>
+            <p>🎉 Made it to the bottom!</p>
+        </div>
+    </div>
+</body>
+</html>
