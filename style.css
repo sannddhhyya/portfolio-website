@@ -391,7 +391,28 @@ h2:last-of-type + p::after {
     transform: translateY(-50%);
     font-size: 1.5em;
 }
+.project {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
 
+.project h3 {
+    margin-top: 0;
+    color: #ff6f61;
+}
+
+.project a {
+    text-decoration: none;
+    color: #ff6f61;
+    font-weight: bold;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
 /* SCROLLBAR STYLING */
 ::-webkit-scrollbar {
     width: 12px;
@@ -497,25 +518,4 @@ body::after {
 
 /* ADD GOOGLE FONTS IMPORT */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Comfortaa:wght@400;700&family=Quicksand:wght@400;600&family=Poppins:wght@300;400;600;700&display=swap');
-.project {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
 
-.project h3 {
-    margin-top: 0;
-    color: #ff6f61;
-}
-
-.project a {
-    text-decoration: none;
-    color: #ff6f61;
-    font-weight: bold;
-}
-
-.project a:hover {
-    text-decoration: underline;
-}
